@@ -72,17 +72,6 @@
           </div>
           
           <div class="form-group">
-            <label for="contact-subject" class="form-label">transmission_subject</label>
-            <select id="contact-subject" class="form-control" required>
-              <option value="" disabled selected>Select subject classification...</option>
-              <option value="general">GENERAL_INQUIRY // FEEDBACK</option>
-              <option value="support">TECHNICAL_SUPPORT // PORTALS</option>
-              <option value="collab">COLLABORATION_PROPOSAL</option>
-              <option value="requests">APP_DEVELOPMENT_REQUEST</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
             <label for="contact-message" class="form-label">message_payload</label>
             <textarea id="contact-message" class="form-control" style="min-height: 120px; resize: vertical;" placeholder="Type your message details here..." required></textarea>
           </div>
@@ -125,16 +114,14 @@
       
       const name = document.getElementById('contact-name').value.trim();
       const email = document.getElementById('contact-email').value.trim();
-      const subject = document.getElementById('contact-subject').value;
       const message = document.getElementById('contact-message').value.trim();
       
-      if (name && email && subject && message) {
+      if (name && email && message) {
         // Redundancy: save locally first
         const transmissions = JSON.parse(localStorage.getItem('contact_transmissions') || '[]');
         transmissions.push({
           name,
           email,
-          subject,
           message,
           timestamp: new Date().toISOString()
         });
@@ -150,7 +137,7 @@
             },
             body: JSON.stringify({
               access_key: WEB3FORMS_ACCESS_KEY,
-              subject: `nexxbit.io Contact: ${subject.toUpperCase()}`,
+              subject: "nexxbit.io Contact Inquiry",
               from_name: name,
               email: email,
               message: message
