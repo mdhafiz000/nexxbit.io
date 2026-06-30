@@ -117,6 +117,9 @@
 
   <!-- Contact Form submission script -->
   <script>
+    // Web3Forms Configuration: Enter your access key received from web3forms.com
+    const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -126,7 +129,7 @@
       const message = document.getElementById('contact-message').value.trim();
       
       if (name && email && subject && message) {
-        // Mock transmission save to localStorage
+        // Redundancy: save locally first
         const transmissions = JSON.parse(localStorage.getItem('contact_transmissions') || '[]');
         transmissions.push({
           name,
@@ -137,6 +140,24 @@
         });
         localStorage.setItem('contact_transmissions', JSON.stringify(transmissions));
         
+        // Submit to Web3Forms if key is provided
+        if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_ACCESS_KEY,
+              subject: `nexxbit.io Contact: ${subject.toUpperCase()}`,
+              from_name: name,
+              email: email,
+              message: message
+            })
+          });
+        }
+
         // Hide form and show success logs
         document.getElementById('contact-form').style.display = 'none';
         document.getElementById('contact-success').style.display = 'block';

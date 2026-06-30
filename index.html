@@ -223,18 +223,41 @@
 
   <!-- Interactive Suggestion Script & Typist Placeholder Animation -->
   <script>
+    // Web3Forms Configuration: Enter your access key received from web3forms.com
+    const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+
     // Form submission interceptor
     document.getElementById('suggestion-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const input = document.getElementById('suggestion-input');
-      if (input.value.trim()) {
+      const suggestionText = input.value.trim();
+      
+      if (suggestionText) {
+        // Redundancy: save locally first
         const suggestions = JSON.parse(localStorage.getItem('app_suggestions') || '[]');
         suggestions.push({
-          text: input.value.trim(),
+          text: suggestionText,
           timestamp: new Date().toISOString()
         });
         localStorage.setItem('app_suggestions', JSON.stringify(suggestions));
         
+        // Submit to Web3Forms if key is provided
+        if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_ACCESS_KEY,
+              subject: "New App Suggestion - nexxbit.io",
+              from_name: "nexxbit.io Landing Page",
+              suggestion: suggestionText
+            })
+          });
+        }
+
         document.getElementById('suggestion-form').style.display = 'none';
         document.getElementById('suggestion-success').style.display = 'block';
       }
