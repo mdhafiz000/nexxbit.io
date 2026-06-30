@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nexxbit.io // cognitive agent platform</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="nexxbit.io - A sleek, high-performance ecosystem of cognitive tools, learning portals, and distributed AI agents.">
+  <meta name="keywords" content="nexxbit, AI, education, cognitive agents, school, learning portal, interactive portal">
+  <meta name="author" content="nexxbit.io">
+  
+  <!-- Google Fonts: Share Tech Mono for code-hud and Outfit for clean sans-serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Dynamic 3D Torus Background Canvas -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Interactive Grid Scan Overlay (Hi-Tech Grid HUD) -->
+  <div class="hud-grid-overlay"></div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="page-wrapper">
+    
+    <!-- Top Header -->
+    <header class="site-header">
+      <div class="header-logo">
+        <span class="logo-accent">⚡</span> nexxbit
+      </div>
+      <div class="sys-status">
+        <span class="status-dot"></span>
+        <span class="status-text">SYS_STATUS: ACTIVE // v1.0.0</span>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-section">
+      <h1 class="hero-title">NEXXBIT</h1>
+      <h2 class="hero-subtitle">COGNITIVE AGENT PLATFORM</h2>
+      <p class="hero-description">
+        A lightweight, distributed ecosystem of high-performance tools, gamified learning environments, and secure user portals built for the next generation of digital infrastructure.
+      </p>
+    </main>
+
+    <!-- Product Subdomain Grid (6 Cards) -->
+    <section class="products-grid">
+      
+      <!-- Card 1: school -->
+      <a href="https://school.nexxbit.io" target="_blank" class="product-card" id="card-school">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">🧒</span>
+          <span class="card-tag">SUB_DOM: school</span>
+        </div>
+        <h3 class="card-title">school</h3>
+        <p class="card-desc">
+          Versatile learning portal for students, teachers, and parents. Features compulsory email safety, child privacy controls, and custom rate-limiting.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 2: math -->
+      <a href="https://math.nexxbit.io" target="_blank" class="product-card" id="card-math">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">📐</span>
+          <span class="card-tag">SUB_DOM: math</span>
+        </div>
+        <h3 class="card-title">math</h3>
+        <p class="card-desc">
+          Gamified quest playground and algorithmic question engines. Generates practice worksheets dynamically with instant feedback.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 3: learn -->
+      <a href="https://learn.nexxbit.io" target="_blank" class="product-card" id="card-learn">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">🧠</span>
+          <span class="card-tag">SUB_DOM: learn</span>
+        </div>
+        <h3 class="card-title">learn</h3>
+        <p class="card-desc">
+          Adaptive cognitive learning pathways and AI-driven study planning. Translates study statistics into predictive success metrics.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 4: portal -->
+      <a href="https://portal.nexxbit.io" target="_blank" class="product-card" id="card-portal">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">🔑</span>
+          <span class="card-tag">SUB_DOM: portal</span>
+        </div>
+        <h3 class="card-title">portal</h3>
+        <p class="card-desc">
+          Secure identity broker and directory service directory. Connects parents to children's accounts with granular password overrides.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 5: labs -->
+      <a href="https://labs.nexxbit.io" target="_blank" class="product-card" id="card-labs">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">🧪</span>
+          <span class="card-tag">SUB_DOM: labs</span>
+        </div>
+        <h3 class="card-title">labs</h3>
+        <p class="card-desc">
+          Experimental AI sandbox showcasing agent simulation models, neural interfaces, and next-generation cognitive interface mockups.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 6: studio -->
+      <a href="https://studio.nexxbit.io" target="_blank" class="product-card" id="card-studio">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="card-icon">🎨</span>
+          <span class="card-tag">SUB_DOM: studio</span>
+        </div>
+        <h3 class="card-title">studio</h3>
+        <p class="card-desc">
+          Asset creator and graphic design suite. Generates modern vector assets, logos, and custom UI canvases for education ecosystems.
+        </p>
+        <div class="card-action">
+          LAUNCH_PORTAL <span class="arrow">→</span>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-meta">
+        © 2026 nexxbit.io // COGNITIVE LABS. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-links">
+        <a href="https://school.nexxbit.io/legal/terms" target="_blank" class="footer-link">TERMS_OF_SERVICE</a>
+        <span class="link-separator">//</span>
+        <a href="https://school.nexxbit.io/legal/privacy" target="_blank" class="footer-link">PRIVACY_POLICY</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Background script -->
+  <script src="./canvas-bg.js"></script>
+</body>
+</html>
