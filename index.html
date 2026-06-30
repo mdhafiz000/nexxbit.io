@@ -31,9 +31,12 @@
     
     <!-- Top Header -->
     <header class="site-header">
-      <div class="header-logo">
-        <span class="logo-accent">⚡</span> nexxbit
-      </div>
+      <a href="./index.html" class="header-logo">nexxbit.io</a>
+      <nav class="header-nav">
+        <a href="./index.html" class="nav-link active">HOME</a>
+        <a href="./services.html" class="nav-link">SERVICES</a>
+        <a href="./contact.html" class="nav-link">CONTACT</a>
+      </nav>
       <div class="sys-status">
         <span class="status-dot"></span>
         <span class="status-text">SYS_STATUS: ACTIVE // v1.0.0</span>
@@ -56,7 +59,12 @@
       <a href="https://school.nexxbit.io" target="_blank" class="product-card" id="card-school">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">🧒</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+            </svg>
+          </span>
           <span class="card-tag">SUB_DOM: school</span>
         </div>
         <h3 class="card-title">school</h3>
@@ -68,16 +76,21 @@
         </div>
       </a>
 
-      <!-- Card 2: math -->
-      <a href="https://math.nexxbit.io" target="_blank" class="product-card" id="card-math">
+      <!-- Card 2: 3D animation (formerly math) -->
+      <a href="https://nexximage.com" target="_blank" class="product-card" id="card-math">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">📐</span>
-          <span class="card-tag">SUB_DOM: math</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/>
+            </svg>
+          </span>
+          <span class="card-tag">LINK: nexximage.com</span>
         </div>
-        <h3 class="card-title">math</h3>
+        <h3 class="card-title">3D animation</h3>
         <p class="card-desc">
-          Gamified quest playground and algorithmic question engines. Generates practice worksheets dynamically with instant feedback.
+          Sleek, physics-based 3D particle systems and real-time morphing simulations. Showcase dynamic visual layouts and immersive canvases.
         </p>
         <div class="card-action">
           LAUNCH_PORTAL <span class="arrow">→</span>
@@ -85,69 +98,110 @@
       </a>
 
       <!-- Card 3: learn -->
-      <a href="https://learn.nexxbit.io" target="_blank" class="product-card" id="card-learn">
+      <div class="product-card under-construction" id="card-learn">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">🧠</span>
-          <span class="card-tag">SUB_DOM: learn</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+            </svg>
+          </span>
+          <span class="card-tag">STATUS: cooking_in_lab</span>
         </div>
-        <h3 class="card-title">learn</h3>
+        <h3 class="card-title">cooking in lab</h3>
         <p class="card-desc">
-          Adaptive cognitive learning pathways and AI-driven study planning. Translates study statistics into predictive success metrics.
+          Active development and core module training in progress. This node is currently offline undergoing sandbox testing.
         </p>
         <div class="card-action">
-          LAUNCH_PORTAL <span class="arrow">→</span>
+          UNDER_CONSTRUCTION // IN_DEV
         </div>
-      </a>
+      </div>
 
       <!-- Card 4: portal -->
-      <a href="https://portal.nexxbit.io" target="_blank" class="product-card" id="card-portal">
+      <div class="product-card under-construction" id="card-portal">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">🔑</span>
-          <span class="card-tag">SUB_DOM: portal</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+            </svg>
+          </span>
+          <span class="card-tag">STATUS: cooking_in_lab</span>
         </div>
-        <h3 class="card-title">portal</h3>
+        <h3 class="card-title">cooking in lab</h3>
         <p class="card-desc">
-          Secure identity broker and directory service directory. Connects parents to children's accounts with granular password overrides.
+          Active development and core module training in progress. This node is currently offline undergoing sandbox testing.
         </p>
         <div class="card-action">
-          LAUNCH_PORTAL <span class="arrow">→</span>
+          UNDER_CONSTRUCTION // IN_DEV
         </div>
-      </a>
+      </div>
 
       <!-- Card 5: labs -->
-      <a href="https://labs.nexxbit.io" target="_blank" class="product-card" id="card-labs">
+      <div class="product-card under-construction" id="card-labs">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">🧪</span>
-          <span class="card-tag">SUB_DOM: labs</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+            </svg>
+          </span>
+          <span class="card-tag">STATUS: cooking_in_lab</span>
         </div>
-        <h3 class="card-title">labs</h3>
+        <h3 class="card-title">cooking in lab</h3>
         <p class="card-desc">
-          Experimental AI sandbox showcasing agent simulation models, neural interfaces, and next-generation cognitive interface mockups.
+          Active development and core module training in progress. This node is currently offline undergoing sandbox testing.
         </p>
         <div class="card-action">
-          LAUNCH_PORTAL <span class="arrow">→</span>
+          UNDER_CONSTRUCTION // IN_DEV
         </div>
-      </a>
+      </div>
 
       <!-- Card 6: studio -->
-      <a href="https://studio.nexxbit.io" target="_blank" class="product-card" id="card-studio">
+      <div class="product-card under-construction" id="card-studio">
         <div class="card-glow"></div>
         <div class="card-header">
-          <span class="card-icon">🎨</span>
-          <span class="card-tag">SUB_DOM: studio</span>
+          <span class="card-icon">
+            <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+            </svg>
+          </span>
+          <span class="card-tag">STATUS: cooking_in_lab</span>
         </div>
-        <h3 class="card-title">studio</h3>
+        <h3 class="card-title">cooking in lab</h3>
         <p class="card-desc">
-          Asset creator and graphic design suite. Generates modern vector assets, logos, and custom UI canvases for education ecosystems.
+          Active development and core module training in progress. This node is currently offline undergoing sandbox testing.
         </p>
         <div class="card-action">
-          LAUNCH_PORTAL <span class="arrow">→</span>
+          UNDER_CONSTRUCTION // IN_DEV
         </div>
-      </a>
+      </div>
 
+    </section>
+
+    <!-- App Suggestion Box Section -->
+    <section class="suggestion-section">
+      <div class="suggestion-container">
+        <h3 class="suggestion-title">what other app you want us to build?</h3>
+        <p class="suggestion-subtitle">Tell us what tools you need. We design reachable, affordable digital infrastructure to support everyday users and expand humanity.</p>
+        <form id="suggestion-form" class="suggestion-form">
+          <textarea id="suggestion-input" placeholder="e.g. " required></textarea>
+          <button type="submit" class="btn-submit">
+            SUBMIT_REQUEST <span class="arrow">→</span>
+          </button>
+        </form>
+        <div id="suggestion-success" class="success-message" style="display: none;">
+          SUGGESTION_RECEIVED // SYS_LOGGED // THANK_YOU
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -156,9 +210,9 @@
         © 2026 nexxbit.io // COGNITIVE LABS. ALL RIGHTS RESERVED.
       </div>
       <div class="footer-links">
-        <a href="https://school.nexxbit.io/legal/terms" target="_blank" class="footer-link">TERMS_OF_SERVICE</a>
+        <a href="./legal/terms.html" class="footer-link">TERMS_OF_SERVICE</a>
         <span class="link-separator">//</span>
-        <a href="https://school.nexxbit.io/legal/privacy" target="_blank" class="footer-link">PRIVACY_POLICY</a>
+        <a href="./legal/privacy.html" class="footer-link">PRIVACY_POLICY</a>
       </div>
     </footer>
 
@@ -166,5 +220,83 @@
 
   <!-- Background script -->
   <script src="./canvas-bg.js"></script>
+
+  <!-- Interactive Suggestion Script & Typist Placeholder Animation -->
+  <script>
+    // Form submission interceptor
+    document.getElementById('suggestion-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = document.getElementById('suggestion-input');
+      if (input.value.trim()) {
+        const suggestions = JSON.parse(localStorage.getItem('app_suggestions') || '[]');
+        suggestions.push({
+          text: input.value.trim(),
+          timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('app_suggestions', JSON.stringify(suggestions));
+        
+        document.getElementById('suggestion-form').style.display = 'none';
+        document.getElementById('suggestion-success').style.display = 'block';
+      }
+    });
+
+    // Blinking cursor & typing animation for placeholder
+    const placeholderTexts = [
+      "a lightweight collaborative document editor?",
+      "a secure personal vault with client-side encryption?",
+      "a simplified class scheduler for local schools?",
+      "a distraction-free ambient study soundscape player?"
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let cursorVisible = true;
+    const inputElement = document.getElementById('suggestion-input');
+    
+    const typeSpeed = 50;
+    const deleteSpeed = 25;
+    const pauseBeforeDelete = 1800;
+    const pauseBeforeType = 400;
+
+    function typeAnimation() {
+      const currentText = placeholderTexts[textIndex];
+      
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      const displayText = currentText.slice(0, charIndex);
+      inputElement.placeholder = "e.g. " + displayText + (cursorVisible ? "_" : " ");
+
+      let delay = isDeleting ? deleteSpeed : typeSpeed;
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        delay = pauseBeforeDelete;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % placeholderTexts.length;
+        delay = pauseBeforeType;
+      }
+
+      setTimeout(typeAnimation, delay);
+    }
+
+    // Independent cursor blink loop to make sure it blinks continuously
+    setInterval(() => {
+      cursorVisible = !cursorVisible;
+      const currentText = placeholderTexts[textIndex];
+      const displayText = currentText.slice(0, charIndex);
+      if (!inputElement.value) {
+        inputElement.placeholder = "e.g. " + displayText + (cursorVisible ? "_" : " ");
+      }
+    }, 450);
+
+    // Initial delay before typewriter starts
+    setTimeout(typeAnimation, 1000);
+  </script>
 </body>
 </html>

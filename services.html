@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Mission - nexxbit.io</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Our services and core mission - Building reachable, affordable, and human-centered technology at nexxbit.io.">
+  <meta name="keywords" content="nexxbit, affordable tech, education technology, human-centered software, Malaysia tech">
+  <meta name="author" content="nexxbit.io">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Dynamic 3D Torus Background Canvas -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Interactive Grid Scan Overlay -->
+  <div class="hud-grid-overlay"></div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="page-wrapper">
+    
+    <!-- Top Header -->
+    <header class="site-header">
+      <a href="./index.html" class="header-logo">nexxbit.io</a>
+      <nav class="header-nav">
+        <a href="./index.html" class="nav-link">HOME</a>
+        <a href="./services.html" class="nav-link active">SERVICES</a>
+        <a href="./contact.html" class="nav-link">CONTACT</a>
+      </nav>
+      <div class="sys-status">
+        <span class="status-dot"></span>
+        <span class="status-text">SYS_STATUS: ACTIVE // v1.0.0</span>
+      </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <main class="services-hero">
+      <h1 class="hero-title" style="font-size: 4.5rem;">OUR MISSION</h1>
+      <h2 class="hero-subtitle">REACHABLE // AFFORDABLE // HUMAN-CENTERED</h2>
+      <p class="hero-description" style="max-width: 680px; margin: 0 auto;">
+        We believe that technology should be a fundamental bridge for human capability, not an exclusive privilege. Our focus is to engineer subdomains and apps that remain accessible, cost-effective, and aligned with human values.
+      </p>
+    </main>
+
+    <!-- Philosophy Grid -->
+    <section class="philosophy-grid">
+      
+      <!-- Card 1: Reachable -->
+      <div class="philosophy-card">
+        <h3 class="philosophy-title">reachable tech</h3>
+        <p class="philosophy-desc">
+          Software should be usable by anyone, anywhere, regardless of their device specifications or network bandwidth. We write lightweight, resource-optimized interfaces that load instantly in rural classrooms and high-tech labs alike.
+        </p>
+      </div>
+
+      <!-- Card 2: Affordable -->
+      <div class="philosophy-card">
+        <h3 class="philosophy-title">affordable access</h3>
+        <p class="philosophy-desc">
+          We strip out enterprise bloat and proprietary pricing models. By deploying hyper-efficient architectures, we keep operational overhead minimal. This allows us to scale services at a fraction of the cost, passing savings to local communities.
+        </p>
+      </div>
+
+      <!-- Card 3: Building Humanity -->
+      <div class="philosophy-card">
+        <h3 class="philosophy-title">building humanity</h3>
+        <p class="philosophy-desc">
+          Technology must support education, connection, and growth. From student-safe portals to algorithmic math playgrounds, we build interactive environments that help classrooms, teachers, and parents coordinate safely and organically.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-meta">
+        © 2026 nexxbit.io // COGNITIVE LABS. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-links">
+        <a href="./legal/terms.html" class="footer-link">TERMS_OF_SERVICE</a>
+        <span class="link-separator">//</span>
+        <a href="./legal/privacy.html" class="footer-link">PRIVACY_POLICY</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Background script -->
+  <script src="./canvas-bg.js"></script>
+</body>
+</html>

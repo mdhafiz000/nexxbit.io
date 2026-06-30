@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - nexxbit.io</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch with nexxbit.io. Reach out for support, app requests, or general inquiries.">
+  <meta name="keywords" content="contact nexxbit, cognitive agent platform, support, collaboration">
+  <meta name="author" content="nexxbit.io">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Dynamic 3D Torus Background Canvas -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Interactive Grid Scan Overlay -->
+  <div class="hud-grid-overlay"></div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="page-wrapper">
+    
+    <!-- Top Header -->
+    <header class="site-header">
+      <a href="./index.html" class="header-logo">nexxbit.io</a>
+      <nav class="header-nav">
+        <a href="./index.html" class="nav-link">HOME</a>
+        <a href="./services.html" class="nav-link">SERVICES</a>
+        <a href="./contact.html" class="nav-link active">CONTACT</a>
+      </nav>
+      <div class="sys-status">
+        <span class="status-dot"></span>
+        <span class="status-text">SYS_STATUS: ACTIVE // v1.0.0</span>
+      </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="services-hero">
+      <h1 class="hero-title" style="font-size: 4.5rem;">CONTACT US</h1>
+      <h2 class="hero-subtitle">SECURE UPLINK // SYS_COMMUNICATION</h2>
+      <p class="hero-description" style="max-width: 680px; margin: 0 auto;">
+        Transmit your coordinates and message payload directly to our cognitive agent labs. We monitor this secure frequency and will respond to establish a reliable handshake.
+      </p>
+    </section>
+
+    <!-- Main Content Contact Section -->
+    <main class="contact-section" style="padding-top: 1rem;">
+      <div class="contact-container">
+        <div class="form-header" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span class="status-dot" style="background-color: var(--primary-indigo); box-shadow: 0 0 10px var(--primary-indigo); width: 6px; height: 6px; border-radius: 50%;"></span>
+          <span style="font-family: var(--font-hud); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--text-primary);">SECURE_UPLINK_FORM</span>
+        </div>
+        
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">sender_name</label>
+            <input type="text" id="contact-name" class="form-control" placeholder="e.g. Eilhan Daniel" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-email" class="form-label">sender_email</label>
+            <input type="email" id="contact-email" class="form-control" placeholder="e.g. daniel@student.nexxbit.io" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">transmission_subject</label>
+            <select id="contact-subject" class="form-control" required>
+              <option value="" disabled selected>Select subject classification...</option>
+              <option value="general">GENERAL_INQUIRY // FEEDBACK</option>
+              <option value="support">TECHNICAL_SUPPORT // PORTALS</option>
+              <option value="collab">COLLABORATION_PROPOSAL</option>
+              <option value="requests">APP_DEVELOPMENT_REQUEST</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-message" class="form-label">message_payload</label>
+            <textarea id="contact-message" class="form-control" style="min-height: 120px; resize: vertical;" placeholder="Type your message details here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-submit btn-contact">
+            SEND_TRANSMISSION <span class="arrow">→</span>
+          </button>
+        </form>
+
+        <div id="contact-success" class="success-message" style="display: none;">
+          TRANSMISSION_SENT // SECURE_HANDSHAKE_ESTABLISHED // WE_WILL_CONTACT_YOU
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-meta">
+        © 2026 nexxbit.io // COGNITIVE LABS. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-links">
+        <a href="./legal/terms.html" class="footer-link">TERMS_OF_SERVICE</a>
+        <span class="link-separator">//</span>
+        <a href="./legal/privacy.html" class="footer-link">PRIVACY_POLICY</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Background script -->
+  <script src="./canvas-bg.js"></script>
+
+  <!-- Contact Form submission script -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value.trim();
+      
+      if (name && email && subject && message) {
+        // Mock transmission save to localStorage
+        const transmissions = JSON.parse(localStorage.getItem('contact_transmissions') || '[]');
+        transmissions.push({
+          name,
+          email,
+          subject,
+          message,
+          timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('contact_transmissions', JSON.stringify(transmissions));
+        
+        // Hide form and show success logs
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('contact-success').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
